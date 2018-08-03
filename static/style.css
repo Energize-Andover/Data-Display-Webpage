@@ -1,0 +1,20 @@
+#data_transfer
+{
+    visibility: hidden;
+}
+
+td, th
+{
+    border: solid 1px black;
+    margin: 0px;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+#floor-select
+{
+    float: left;
+}

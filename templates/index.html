@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	<head>
+		<title>Basic App - Flask</title>
+
+		<!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+
+        <!-- External Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+
+        <!-- http://jquery.com/ -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="/static/script.js"></script>
+	</head>
+
+	<header>
+
+        {{message}}
+
+	</header>
+
+	<body>
+
+        <form id="floor-select">
+
+            Floors: <br>
+            <input type="radio" onclick="switch_floor(this.id)" id="floor0"> 1 <br>
+            <input type="radio" onclick="switch_floor(this.id)" id="floor1"> 2 <br>
+            <input type="radio" onclick="switch_floor(this.id)" id="floor2" checked="checked"> 3 <br>
+
+        </form>
+
+        <table>
+
+            <tr>
+
+                <th>Wing</th>
+
+                <th>
+
+                    <input type="radio" onclick="switch_data(this.id)" id="temp" checked="checked"> Temp
+                    <input type="radio" onclick="switch_data(this.id)" id="co2"> CO2
+
+                </th>
+
+                <th> Maximum Value </th>
+
+                <th> Room Name of Max Value </th>
+
+            </tr>
+
+            <tr>
+
+                <td>A</td>
+
+                <td class="avg a"></td>
+
+                <td class="max a"></td>
+
+                <td class="room a"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>B</td>
+
+                <td class="avg b"></td>
+
+                <td class="max b"></td>
+
+                <td class="room b"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>C</td>
+
+                <td class="avg c"></td>
+
+                <td class="max c"></td>
+
+                <td class="room c"></td>
+
+            </tr>
+
+            <tr>
+
+                <td>D</td>
+
+                <td class="avg d"></td>
+
+                <td class="max d"></td>
+
+                <td class="room d"></td>
+
+            </tr>
+
+        </table>
+
+
+	</body>
+
+	<footer>
+
+		{% block footer %}{% endblock %}
+
+	</footer>
+
+    <!--<div id="data_transfer">-->
+
+        <!--{{results}}-->
+
+    <!--</div>-->
+</html>
