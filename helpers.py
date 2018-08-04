@@ -76,8 +76,8 @@ def load_data(file):
             results[i][j] = list(results[0][0])
             for k, wing in enumerate(wings):
                 data = get_wing(get_floor(df, floor), wing)
-                print(data)
-                print(data.empty)
+                # print(data)
+                # print(data.empty)
                 if data.empty:
                     temp = [-1, -1, None]
                 else:

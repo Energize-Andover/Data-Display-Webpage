@@ -10,7 +10,6 @@ var index = 0;
 var floor = 2;
 
 function update_table() {
-    print(air_data);
 
     // wing A
     wing_a = document.getElementsByClassName("a");
@@ -109,7 +108,6 @@ function update_floor(selected_floor) {
         console.log("updated floor data recieved");
         // update air_data with the new data
         air_data = data;
-        print(air_data);
         document.getElementsByTagName("header").innerHTML = "";
         update_table();
         }
@@ -139,10 +137,9 @@ function sleep(ms) {
 
 async function background_update() {
     while(true) {
-
+        await sleep(18000000);
         update_table();
         update_all_data();
-        await sleep(600000); //18000000
     }
 }
 

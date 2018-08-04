@@ -23,7 +23,7 @@ def index():
 def update(): # sends JSON containing the updated data
     global results
     print("Updating")
-    os.system('python3 ahs_air.py -h 10.12.4.98 -p 8000 ; wait')
+    #os.system('python3 ahs_air.py -h 10.12.4.98 -p 8000 ; wait')
 
     results = helpers.load_data("csv/ahs_air_output.csv")
 
@@ -56,7 +56,7 @@ def update_area():
 
     wing = request.args.get("wing")
     floor = request.args.get("floor")
-    os.system('python3 query_specific.py -h 10.12.4.98 -p 8000 -w ' + wing + ' -f ' + floor + ' ; wait')
+    #os.system('python3 query_specific.py -h 10.12.4.98 -p 8000 -w ' + wing + ' -f ' + floor + ' ; wait')
 
     global results
     area_results = helpers.load_data("csv/ahs_air_specific_output.csv")
